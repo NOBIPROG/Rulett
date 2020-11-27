@@ -3,9 +3,12 @@ public class Person {
     private String name;
     private int valet;
     private int bet;
-    private Strategy strategy;
+    private String strategy;
+    private boolean wasWin= true;
+    private String chosenCombination;
 
-    public Person(String name, int valet, Strategy strategy) {
+
+    public Person(String name, int valet, String strategy) {
         this.name = name;
         this.valet = valet;
         this.strategy = strategy;
@@ -14,6 +17,7 @@ public class Person {
     public Person(String name, int valet) {
         this.name = name;
         this.valet = valet;
+        chosenCombination = "red";
         int random = (int)(Math.random()*2);
 
     }
@@ -42,8 +46,36 @@ public class Person {
         this.bet = bet;
     }
 
-    public Strategy getStrategy() {
+    public String getStrategy() {
         return strategy;
     }
 
+    public boolean isWasWin() {
+        return wasWin;
+    }
+
+    public void setWasWin(boolean wasWin) {
+        this.wasWin = wasWin;
+    }
+
+    public String getChosenCombination() {
+        return chosenCombination;
+    }
+
+    public void setChosenCombination(String chosenCombination) {
+        this.chosenCombination = chosenCombination;
+    }
+
+    public void bet (Rulett rulett){
+        if (strategy.equals("alwaysred")){
+            setChosenCombination("red");
+            if (wasWin){
+                setBet(100);
+                setValet(getValet() - getBet());
+            }
+            else {
+                setBet(getBet()*2);
+            }
+        }
+    }
 }
