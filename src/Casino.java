@@ -16,7 +16,15 @@ public class Casino {
     }
 
     public void play(){
+        for (Person value : people) {
+            value.bet(rulett);
+        }
         int winnerNr = rulett.getNr();
-
+        for (Person person : people) {
+            if ()
+            switch (winnerNr){
+                case 0: if (person.getChosenCombination())
+            }
+        }
     }
 }
