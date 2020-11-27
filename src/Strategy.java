@@ -1,6 +1,6 @@
 public interface Strategy {
 
-   void firstBet();
-   void anotherRound();
+   void bet(Rulett rulett, Person person);
+
 
 }
