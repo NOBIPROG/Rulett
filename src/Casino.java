@@ -12,10 +12,11 @@ public class Casino {
     }
 
     public void fillUpCasino(){
-
+        people.add(new Person("Martingél Béla",1000,"red"));
     }
 
     public void play(){
+        int winnerNr = rulett.getNr();
 
     }
 }
