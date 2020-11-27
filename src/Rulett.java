@@ -3,15 +3,15 @@ import java.util.TreeMap;
 
 public class Rulett {
 
-    private TreeMap<String, ArrayList<Integer>> fields;
+    private int nr;
     private int round;
 
-    public TreeMap<String, ArrayList<Integer>> getFields() {
-        return fields;
+    public int getNr() {
+        return nr;
     }
 
-    public void setFields(TreeMap<String, ArrayList<Integer>> fields) {
-        this.fields = fields;
+    public void setNr(int nr) {
+        this.nr = nr;
     }
 
     public int getRound() {
@@ -22,7 +22,7 @@ public class Rulett {
         this.round = round;
     }
 
-    public void red(int bet){
+    public void red(int bet,Person p){
 
     }
     public void black(){
@@ -52,5 +52,8 @@ public class Rulett {
     public void thirdThird(){
 
     }
-
+    public void getActualNr(){
+        nr = (int)(Math.random()*36);
+        round++;
+    }
 }
