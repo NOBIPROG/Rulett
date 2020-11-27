@@ -1,5 +1,6 @@
 public interface Strategy {
 
-    void useStrategy();
+   void firstBet();
+   void anotherRound();
 
 }
