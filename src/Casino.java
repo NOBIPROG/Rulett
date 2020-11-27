@@ -16,15 +16,30 @@ public class Casino {
     }
 
     public void play(){
-        for (Person value : people) {
+        for (Person value:people){
             value.bet(rulett);
         }
         int winnerNr = rulett.getNr();
-        for (Person person : people) {
-            if ()
-            switch (winnerNr){
-                case 0: if (person.getChosenCombination())
+for (Person person: people){
+    switch (winnerNr){
+        case 0:
+            for (Person person1:people){
+                if (person1.getChosenCombination().equals("0")){
+                    rulett.numberWin(person1);
+                    break;
+                }
             }
-        }
+        case 1:
+
+                if (person.getChosenCombination().equals("red")){
+                    rulett.redWin(person);
+                }else if (person.getChosenCombination().equals("odd")){
+                    rulett.oddWin(person);
+                }else if(person.getChosenCombination().equals("firstThird")){
+
+            }
+
+    }
+}
     }
 }
