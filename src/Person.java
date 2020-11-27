@@ -1,4 +1,4 @@
-public class Person {
+public class Person implements Strategy{
 
     private String name;
     private int valet;
