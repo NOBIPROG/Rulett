@@ -11,11 +11,100 @@ public class Rulett {
 
     public Rulett() {
         numbersSpecs = new HashMap<>();
-        numbersSpecs.put(0, new HashSet<>()).add(betOptions.NUMBER);
-        numbersSpecs.put(1, new HashSet<>()).add(betOptions.NUMBER);
-        numbersSpecs.get(1).add(betOptions.ODD,);
-        numbersSpecs.get(1).addAll(betOptions.RED,betOptions.LINE1),betOptions.LINE1,betOptions.NUMBERSBETWEEN1AND18
-
+        for (int i = 0; i < 37; i++) {
+            numbersSpecs.put(i, new HashSet<>()).add(betOptions.NUMBER);
+            if (i % 2 == 0) {
+                numbersSpecs.get(i).add(betOptions.EVEN);
+            } else {
+                numbersSpecs.get(i).add(betOptions.ODD);
+            }
+            if (i < 13 && i != 0) {
+                numbersSpecs.get(i).add(betOptions.FIRSTTHIRD);
+                numbersSpecs.get(i).add(betOptions.NUMBERSBETWEEN1AND18);
+            } else if (i >= 13 && i < 25) {
+                numbersSpecs.get(i).add(betOptions.SECONDTHIRD);
+                if (i < 19) {
+                    numbersSpecs.get(i).add(betOptions.NUMBERSBETWEEN1AND18);
+                } else {
+                    numbersSpecs.get(i).add(betOptions.NUMBERSBETWEEN19AND36);
+                }
+            } else if (i > 24) {
+                numbersSpecs.get(i).add(betOptions.THIRDTHIRD);
+                numbersSpecs.get(i).add(betOptions.NUMBERSBETWEEN19AND36);
+            }
+        }
+        numbersSpecs.get(1).add(betOptions.RED);
+        numbersSpecs.get(1).add(betOptions.LINE1);
+        numbersSpecs.get(2).add(betOptions.BLACK);
+        numbersSpecs.get(2).add(betOptions.LINE2);
+        numbersSpecs.get(3).add(betOptions.RED);
+        numbersSpecs.get(3).add(betOptions.LINE3);
+        numbersSpecs.get(4).add(betOptions.BLACK);
+        numbersSpecs.get(4).add(betOptions.LINE1);
+        numbersSpecs.get(5).add(betOptions.LINE2);
+        numbersSpecs.get(5).add(betOptions.RED);
+        numbersSpecs.get(6).add(betOptions.BLACK);
+        numbersSpecs.get(8).add(betOptions.BLACK);
+        numbersSpecs.get(10).add(betOptions.BLACK);
+        numbersSpecs.get(11).add(betOptions.BLACK);
+        numbersSpecs.get(13).add(betOptions.BLACK);
+        numbersSpecs.get(15).add(betOptions.BLACK);
+        numbersSpecs.get(17).add(betOptions.BLACK);
+        numbersSpecs.get(20).add(betOptions.BLACK);
+        numbersSpecs.get(22).add(betOptions.BLACK);
+        numbersSpecs.get(24).add(betOptions.BLACK);
+        numbersSpecs.get(26).add(betOptions.BLACK);
+        numbersSpecs.get(28).add(betOptions.BLACK);
+        numbersSpecs.get(29).add(betOptions.BLACK);
+        numbersSpecs.get(31).add(betOptions.BLACK);
+        numbersSpecs.get(33).add(betOptions.BLACK);
+        numbersSpecs.get(35).add(betOptions.BLACK);
+        numbersSpecs.get(7).add(betOptions.RED);
+        numbersSpecs.get(9).add(betOptions.RED);
+        numbersSpecs.get(12).add(betOptions.RED);
+        numbersSpecs.get(14).add(betOptions.RED);
+        numbersSpecs.get(16).add(betOptions.RED);
+        numbersSpecs.get(18).add(betOptions.RED);
+        numbersSpecs.get(19).add(betOptions.RED);
+        numbersSpecs.get(21).add(betOptions.RED);
+        numbersSpecs.get(23).add(betOptions.RED);
+        numbersSpecs.get(25).add(betOptions.RED);
+        numbersSpecs.get(27).add(betOptions.RED);
+        numbersSpecs.get(30).add(betOptions.RED);
+        numbersSpecs.get(32).add(betOptions.RED);
+        numbersSpecs.get(34).add(betOptions.RED);
+        numbersSpecs.get(36).add(betOptions.RED);
+        numbersSpecs.get(7).add(betOptions.LINE1);
+        numbersSpecs.get(10).add(betOptions.LINE1);
+        numbersSpecs.get(13).add(betOptions.LINE1);
+        numbersSpecs.get(16).add(betOptions.LINE1);
+        numbersSpecs.get(19).add(betOptions.LINE1);
+        numbersSpecs.get(22).add(betOptions.LINE1);
+        numbersSpecs.get(25).add(betOptions.LINE1);
+        numbersSpecs.get(28).add(betOptions.LINE1);
+        numbersSpecs.get(31).add(betOptions.LINE1);
+        numbersSpecs.get(34).add(betOptions.LINE1);
+        numbersSpecs.get(8).add(betOptions.LINE2);
+        numbersSpecs.get(11).add(betOptions.LINE2);
+        numbersSpecs.get(14).add(betOptions.LINE2);
+        numbersSpecs.get(17).add(betOptions.LINE2);
+        numbersSpecs.get(20).add(betOptions.LINE2);
+        numbersSpecs.get(23).add(betOptions.LINE2);
+        numbersSpecs.get(26).add(betOptions.LINE2);
+        numbersSpecs.get(29).add(betOptions.LINE2);
+        numbersSpecs.get(32).add(betOptions.LINE2);
+        numbersSpecs.get(35).add(betOptions.LINE2);
+        numbersSpecs.get(6).add(betOptions.LINE3);
+        numbersSpecs.get(9).add(betOptions.LINE3);
+        numbersSpecs.get(12).add(betOptions.LINE3);
+        numbersSpecs.get(15).add(betOptions.LINE3);
+        numbersSpecs.get(18).add(betOptions.LINE3);
+        numbersSpecs.get(21).add(betOptions.LINE3);
+        numbersSpecs.get(24).add(betOptions.LINE3);
+        numbersSpecs.get(27).add(betOptions.LINE3);
+        numbersSpecs.get(30).add(betOptions.LINE3);
+        numbersSpecs.get(33).add(betOptions.LINE3);
+        numbersSpecs.get(36).add(betOptions.LINE3);
     }
 
     public void setMinBet(int minBet) {
