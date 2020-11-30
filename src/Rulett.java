@@ -12,7 +12,8 @@ public class Rulett {
     public Rulett() {
         numbersSpecs = new HashMap<>();
         for (int i = 0; i < 37; i++) {
-            numbersSpecs.put(i, new HashSet<>()).add(betOptions.NUMBER);
+            numbersSpecs.putIfAbsent(i, new HashSet<>());
+            numbersSpecs.get(i).add(betOptions.NUMBER);
             if (i % 2 == 0) {
                 numbersSpecs.get(i).add(betOptions.EVEN);
             } else {

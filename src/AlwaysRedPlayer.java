@@ -9,7 +9,7 @@ public class AlwaysRedPlayer extends Person {
 
     @Override
     public void bet(Rulett rulett) {
-      chosenCombination.setBetOptions(betOptions.RED);
+      chosenCombination = new ChosenCombination(betOptions.RED);
         if (wasWin) {
             setBet(100);
             setValet(getValet() - getBet());

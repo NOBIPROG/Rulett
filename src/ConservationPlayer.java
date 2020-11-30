@@ -8,7 +8,7 @@ public class ConservationPlayer extends Person {
 
     @Override
     public void bet(Rulett rulett) {
-        chosenCombination.setBetOptions(betOptions.RED);
+        chosenCombination = new ChosenCombination(betOptions.RED);
         setBet(rulett.getMinBet());
         setValet(getValet() - getBet());
     }
