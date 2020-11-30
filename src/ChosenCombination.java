@@ -22,8 +22,8 @@ public class ChosenCombination {
         this.betOptions = betOptions;
     }
 
-    public ChosenCombination(betOptions betOptions, int chosenNumber) {
-        this.betOptions = betOptions;
+    public ChosenCombination(int chosenNumber) {
+        this.betOptions = betOptions.NUMBER;
         this.chosenNumber = chosenNumber;
     }
 

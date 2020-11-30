@@ -6,7 +6,19 @@ public abstract class Person {
     protected boolean wasWin;
     protected String strategy;
     protected ChosenCombination chosenCombination;
+    protected int wonMoney;
 
+    public void setChosenCombination(ChosenCombination chosenCombination) {
+        this.chosenCombination = chosenCombination;
+    }
+
+    public int getWonMoney() {
+        return wonMoney;
+    }
+
+    public void setWonMoney(int wonMoney) {
+        this.wonMoney = wonMoney;
+    }
 
     public Person(String name, int valet) {
         this.name = name;
