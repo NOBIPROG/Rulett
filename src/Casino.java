@@ -44,6 +44,14 @@ public class Casino {
             value.bet(rulett);
         }
         int winnerNr = rulett.getActualNr();
+        if (rulett.getResults().get("red").equals(winnerNr)) {
+            System.out.println("Piros" + winnerNr);
+        } else if (rulett.getResults().get("red").equals(winnerNr)) {
+            System.out.println("Fekete" + winnerNr);
+        } else {
+            System.out.println(winnerNr);
+        }
+
         for (Person person : people) {
             if (rulett.getNumbersSpecs().get(winnerNr).contains(person.getChosenCombination().getBetOptions())) {
                 if (person.getChosenCombination().getBetOptions().equals(betOptions.NUMBER) && person.getChosenCombination().getChosenNumber() == winnerNr) {
