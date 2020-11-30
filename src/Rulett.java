@@ -10,6 +10,14 @@ public class Rulett {
     private int maxBet;
     private HashMap<String, Integer> results;
 
+    public void setMinBet(int minBet) {
+        this.minBet = minBet;
+    }
+
+    public void setMaxBet(int maxBet) {
+        this.maxBet = maxBet;
+    }
+
     public int getNr() {
         return nr;
     }
