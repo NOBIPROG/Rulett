@@ -11,6 +11,30 @@ public class Casino {
         rulett = new Rulett();
     }
 
+    public void setPeople(ArrayList<Person> people) {
+        this.people = people;
+    }
+
+    public ArrayList<Person> getPeople() {
+        return people;
+    }
+
+    public Rulett getRulett() {
+        return rulett;
+    }
+
+    public int getIncome() {
+        return income;
+    }
+
+    public void setRulett(Rulett rulett) {
+        this.rulett = rulett;
+    }
+
+    public void setIncome(int income) {
+        this.income = income;
+    }
+
     public void fillUpCasino() {
 
     }
