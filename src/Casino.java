@@ -424,6 +424,7 @@ public class Casino {
                         case "line1" -> rulett.line1Win(person);
                         case "34" -> rulett.numberWin(person);
                         default->person.setWasWin(false);
+
                     }
                     break;
                 case 35:
