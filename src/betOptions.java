@@ -11,6 +11,7 @@ public enum betOptions {
     THIRDTHIRD,
     LINE1,
     LINE2,
-    LINE3
+    LINE3;
+
 
 }

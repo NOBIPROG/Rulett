@@ -69,6 +69,7 @@ public abstract class Person {
                 ", bet=" + bet +
                 ", wasWin=" + wasWin +
                 ", strategy='" + strategy + '\'' +
+                ", chosenCombination=" + chosenCombination +
                 '}';
     }
 }

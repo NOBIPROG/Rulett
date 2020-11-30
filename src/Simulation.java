@@ -20,12 +20,6 @@ public class Simulation {
         casino.getPeople().add(person);
         for (int i = 0; i < nrOfRound; i++) {
             casino.play();
-            for (Map.Entry<String, Integer> entry : casino.getRulett().getResults().entrySet()) {
-                if (entry.getValue().equals(casino.getRulett().getNr())) {
-                    System.out.println(entry.getKey());
-                }
-
-            }
             System.out.println(casino.getPeople().get(0));
         }
     }

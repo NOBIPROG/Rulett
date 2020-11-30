@@ -10,6 +10,8 @@ public class Rulett {
     private HashMap<Integer, Set<betOptions>> numbersSpecs;
 
     public Rulett() {
+        results.put("red",40);
+        results.put("black",40);
         numbersSpecs = new HashMap<>();
         for (int i = 0; i < 37; i++) {
             numbersSpecs.putIfAbsent(i, new HashSet<>());

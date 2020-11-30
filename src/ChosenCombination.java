@@ -26,4 +26,17 @@ public class ChosenCombination {
         this.betOptions = betOptions;
         this.chosenNumber = chosenNumber;
     }
+
+    @Override
+    public String toString() {
+        if (betOptions.equals(betOptions.NUMBER)) {
+            return "ChosenCombination{" +
+                    "betOptions=" + betOptions +
+                    ", chosenNumber=" + chosenNumber +
+                    '}';
+        } else {
+            return "ChosenCombination{" +
+                    "betOptions=" + betOptions;
+        }
+    }
 }

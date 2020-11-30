@@ -45,9 +45,9 @@ public class Casino {
         }
         int winnerNr = rulett.getActualNr();
         if (rulett.getResults().get("red").equals(winnerNr)) {
-            System.out.println("Piros" + winnerNr);
-        } else if (rulett.getResults().get("red").equals(winnerNr)) {
-            System.out.println("Fekete" + winnerNr);
+            System.out.println("Aktuális nyerőszám: Piros " + winnerNr);
+        } else if (rulett.getResults().get("black").equals(winnerNr)) {
+            System.out.println("Aktuális nyerőszám: Fekete " + winnerNr);
         } else {
             System.out.println(winnerNr);
         }
