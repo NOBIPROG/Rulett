@@ -72,7 +72,7 @@ public class Casino {
                         case "firstThird" -> rulett.firstThirdWin(person);
                         case "numbersbetween1and18" -> rulett.numbersbetwen1and18Win(person);
                         case "line2" -> rulett.line2Win(person);
-                        case "2" -> rulett.numberWin(person);
+                        case "8" -> rulett.numberWin(person);
                         default -> person.setWasWin(false);
                     }
                     break;
@@ -138,7 +138,7 @@ public class Casino {
                         case "firstThird" -> rulett.firstThirdWin(person);
                         case "numbersbetween1and18" -> rulett.numbersbetwen1and18Win(person);
                         case "line2" -> rulett.line2Win(person);
-                        case "8" -> rulett.numberWin(person);
+                        case "2" -> rulett.numberWin(person);
                         default -> person.setWasWin(false);
                     }
                     break;

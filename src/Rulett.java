@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.TreeMap;
+import java.util.*;
 
 public class Rulett {
 
@@ -9,6 +7,16 @@ public class Rulett {
     private int minBet;
     private int maxBet;
     private HashMap<String, Integer> results = new HashMap<>();
+    private HashMap<Integer, Set<betOptions>> numbersSpecs;
+
+    public Rulett() {
+        numbersSpecs = new HashMap<>();
+        numbersSpecs.put(0, new HashSet<>()).add(betOptions.NUMBER);
+        numbersSpecs.put(1, new HashSet<>()).add(betOptions.NUMBER);
+        numbersSpecs.get(1).add(betOptions.ODD,);
+        numbersSpecs.get(1).addAll(betOptions.RED,betOptions.LINE1),betOptions.LINE1,betOptions.NUMBERSBETWEEN1AND18
+
+    }
 
     public void setMinBet(int minBet) {
         this.minBet = minBet;
@@ -37,7 +45,7 @@ public class Rulett {
     public void redWin(Person person) {
         person.setValet(person.getValet() + (person.getBet() * 2));
         person.setWasWin(true);
-        System.out.println(person.getName() + " " + (person.getBet() * 2) + " " + person.getChosenCombination());
+        // System.out.println(person.getName() + " " + (person.getBet() * 2) + " " + person.getChosenCombination());
     }
 
     public void blackWin(Person person) {

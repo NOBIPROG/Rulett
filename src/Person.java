@@ -1,20 +1,20 @@
-public abstract class Person implements Strategy {
+public abstract class Person {
 
     protected String name;
     protected int valet;
     protected int bet;
     protected boolean wasWin;
     protected String strategy;
-    protected String chosenCombination;
-
+    protected ChosenCombination chosenCombination;
 
 
     public Person(String name, int valet) {
         this.name = name;
         this.valet = valet;
-        chosenCombination = "red";
-        int random = (int) (Math.random() * 2);
+
+
     }
+    public abstract void bet(Rulett rulett);
 
     public String getName() {
         return name;
@@ -52,13 +52,6 @@ public abstract class Person implements Strategy {
         this.wasWin = wasWin;
     }
 
-    public String getChosenCombination() {
-        return chosenCombination;
-    }
-
-    public void setChosenCombination(String chosenCombination) {
-        this.chosenCombination = chosenCombination;
-    }
 
     public void setStrategy(String strategy) {
         this.strategy = strategy;
@@ -72,7 +65,6 @@ public abstract class Person implements Strategy {
                 ", bet=" + bet +
                 ", wasWin=" + wasWin +
                 ", strategy='" + strategy + '\'' +
-                ", chosenCombination='" + chosenCombination + '\'' +
                 '}';
     }
 }

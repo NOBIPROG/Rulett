@@ -1,0 +1,16 @@
+public enum betOptions {
+    RED,
+    BLACK,
+    ODD,
+    EVEN,
+    NUMBER,
+    NUMBERSBETWEEN19AND36,
+    NUMBERSBETWEEN1AND18,
+    FIRSTTHIRD,
+    SECONDTHIRD,
+    THIRDTHIRD,
+    LINE1,
+    LINE2,
+    LINE3
+
+}
