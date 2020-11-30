@@ -8,7 +8,7 @@ public class Rulett {
     private int round;
     private int minBet;
     private int maxBet;
-    private HashMap<String, Integer> results;
+    private HashMap<String, Integer> results = new HashMap<>();
 
     public void setMinBet(int minBet) {
         this.minBet = minBet;
@@ -113,7 +113,7 @@ public class Rulett {
         return results;
     }
 
-    public void getActualNr() {
+    public int getActualNr() {
         nr = (int) (Math.random() * 36);
         round++;
         switch (nr) {
@@ -130,5 +130,6 @@ public class Rulett {
                 results.put("black", results.get("black") + 1);
             }
         }
+        return nr;
     }
 }
