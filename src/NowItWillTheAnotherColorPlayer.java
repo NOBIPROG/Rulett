@@ -37,7 +37,6 @@ public class NowItWillTheAnotherColorPlayer extends Person {
                     setValet(getValet() - getBet());
 
                 }
-
         }else if (winnerColor.get(winnerColor.size()-2).equals(winnerColor.get(winnerColor.size()-1)) && winnerColor.get(winnerColor.size()-3).equals(winnerColor.get(winnerColor.size()-1)) && winnerColor.get(winnerColor.size()-4).equals(winnerColor.get(winnerColor.size()-1)) && winnerColor.get(winnerColor.size()-1).equals("red")){
             setChosenCombination("black");
             setBet(Math.min(getValet(), randomBetValue));
