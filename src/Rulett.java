@@ -8,7 +8,15 @@ public class Rulett {
     private int round;
     private int minBet;
     private int maxBet;
-    private HashMap <String,Integer> results;
+    private HashMap<String, Integer> results;
+
+    public void setMinBet(int minBet) {
+        this.minBet = minBet;
+    }
+
+    public void setMaxBet(int maxBet) {
+        this.maxBet = maxBet;
+    }
 
     public int getNr() {
         return nr;
@@ -28,31 +36,38 @@ public class Rulett {
 
     public void redWin(Person person) {
         person.setValet(person.getValet() + (person.getBet() * 2));
+        person.setWasWin(true);
     }
 
     public void blackWin(Person person) {
         person.setValet(person.getValet() + (person.getBet() * 2));
+        person.setWasWin(true);
     }
 
     public void evenWin(Person person) {
         person.setValet(person.getValet() + (person.getBet() * 2));
+        person.setWasWin(true);
     }
 
     public void oddWin(Person person) {
         person.setValet(person.getValet() + (person.getBet() * 2));
+        person.setWasWin(true);
     }
 
     public void numberWin(Person person) {
         person.setValet(person.getValet() + (person.getBet() * 36));
+        person.setWasWin(true);
     }
 
     public void numbersbetwen1and18Win(Person person) {
         person.setValet(person.getValet() + (person.getBet() * 2));
+        person.setWasWin(true);
 
     }
 
     public void numbersbetwen19an36Win(Person person) {
         person.setValet(person.getValet() + (person.getBet() * 2));
+        person.setWasWin(true);
     }
 
     public void firstThirdWin(Person person) {
@@ -61,25 +76,28 @@ public class Rulett {
 
     public void secondThirdWin(Person person) {
         person.setValet(person.getValet() + (person.getBet() * 3));
-
+        person.setWasWin(true);
     }
 
     public void thirdThirdWin(Person person) {
         person.setValet(person.getValet() + (person.getBet() * 3));
-
+        person.setWasWin(true);
     }
 
 
     public void line1Win(Person person) {
         person.setValet(person.getValet() + (person.getBet() * 3));
+        person.setWasWin(true);
     }
 
     public void line2Win(Person person) {
         person.setValet(person.getValet() + (person.getBet() * 3));
+        person.setWasWin(true);
     }
 
     public void line3Win(Person person) {
         person.setValet(person.getValet() + (person.getBet() * 3));
+        person.setWasWin(true);
     }
 
     public int getMinBet() {
@@ -94,8 +112,8 @@ public class Rulett {
         return results;
     }
 
-    public void getActualNr(){
-        nr = (int)(Math.random()*36);
+    public void getActualNr() {
+        nr = (int) (Math.random() * 36);
         round++;
         switch (nr) {
             case 0 -> {
