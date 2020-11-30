@@ -157,13 +157,13 @@ public class Rulett {
         person.setWasWin(true);
     }
 
-    public void numbersbetwen1and18Win(Person person) {
+    public void numbersBetween1And18Win(Person person) {
         person.setValet(person.getValet() + (person.getBet() * 2));
         person.setWasWin(true);
 
     }
 
-    public void numbersbetwen19an36Win(Person person) {
+    public void numbersBetween19And36Win(Person person) {
         person.setValet(person.getValet() + (person.getBet() * 2));
         person.setWasWin(true);
     }
@@ -196,6 +196,10 @@ public class Rulett {
     public void line3Win(Person person) {
         person.setValet(person.getValet() + (person.getBet() * 3));
         person.setWasWin(true);
+    }
+
+    public HashMap<Integer, Set<betOptions>> getNumbersSpecs() {
+        return numbersSpecs;
     }
 
     public int getMinBet() {
