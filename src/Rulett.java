@@ -69,6 +69,7 @@ public class Rulett {
 
     }
 
+
     public void line1Win(Person person) {
         person.setValet(person.getValet() + (person.getBet() * 3));
     }
@@ -87,6 +88,10 @@ public class Rulett {
 
     public int getMaxBet() {
         return maxBet;
+    }
+
+    public HashMap<String, Integer> getResults() {
+        return results;
     }
 
     public void getActualNr(){
