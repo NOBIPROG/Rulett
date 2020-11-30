@@ -11,7 +11,7 @@ public class AlwaysRedPlayer extends Person {
     public void bet(Rulett rulett) {
       chosenCombination = new ChosenCombination(betOptions.RED);
         if (wasWin) {
-            setBet(100);
+            setBet(rulett.getMinBet());
             setValet(getValet() - getBet());
         } else {
             setBet(getBet() * 2);
