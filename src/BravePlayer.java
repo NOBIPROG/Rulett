@@ -6,7 +6,7 @@ public class BravePlayer extends Person {
 
     @Override
     public void bet(Rulett rulett) {
-        setChosenCombination("red");
+        chosenCombination.setBetOptions(betOptions.RED);
         if (getValet() >= rulett.getMaxBet()) {
             setBet(rulett.getMaxBet());
         } else {

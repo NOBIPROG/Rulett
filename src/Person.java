@@ -57,6 +57,10 @@ public abstract class Person {
         this.strategy = strategy;
     }
 
+    public ChosenCombination getChosenCombination() {
+        return chosenCombination;
+    }
+
     @Override
     public String toString() {
         return "Person{" +

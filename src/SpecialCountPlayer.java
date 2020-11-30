@@ -19,22 +19,23 @@ public class SpecialCountPlayer extends Person {
         }
         int randomStrategy = (int) (Math.random() * 13);
         switch (randomStrategy) {
-            case 0 -> setChosenCombination("red");
-            case 1 -> setChosenCombination("black");
-            case 2 -> setChosenCombination("even");
-            case 3 -> setChosenCombination("odd");
+            case 0 -> chosenCombination.setBetOptions(betOptions.RED);
+            case 1 -> chosenCombination.setBetOptions(betOptions.BLACK);
+            case 2 -> chosenCombination.setBetOptions(betOptions.EVEN);
+            case 3 -> chosenCombination.setBetOptions(betOptions.ODD);
             case 4 -> {
                 int randomNr = (int) (Math.random() * 36);
-                setChosenCombination(Integer.toString(randomNr));
+                chosenCombination.setBetOptions(betOptions.NUMBER);
+                    chosenCombination.setChosenNumber(randomNr);
             }
-            case 5 -> setChosenCombination("numbersbetwen1and18");
-            case 6 -> setChosenCombination("numbersbetwen19an36");
-            case 7 -> setChosenCombination("firstThird");
-            case 8 -> setChosenCombination("secondThird");
-            case 9 -> setChosenCombination("thirdThird");
-            case 10 -> setChosenCombination("line1");
-            case 11 -> setChosenCombination("line2");
-            case 12 -> setChosenCombination("line3");
+            case 5 -> chosenCombination.setBetOptions(betOptions.NUMBERSBETWEEN1AND18);
+            case 6 -> chosenCombination.setBetOptions(betOptions.NUMBERSBETWEEN19AND36);
+            case 7 -> chosenCombination.setBetOptions(betOptions.FIRSTTHIRD);
+            case 8 -> chosenCombination.setBetOptions(betOptions.SECONDTHIRD);
+            case 9 -> chosenCombination.setBetOptions(betOptions.THIRDTHIRD);
+            case 10 -> chosenCombination.setBetOptions(betOptions.LINE1);
+            case 11 -> chosenCombination.setBetOptions(betOptions.LINE2);
+            case 12 -> chosenCombination.setBetOptions(betOptions.LINE3);
 
         }
         if (nrOfWin == 0) {

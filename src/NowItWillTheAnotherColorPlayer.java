@@ -29,7 +29,7 @@ public class NowItWillTheAnotherColorPlayer extends Person {
         }
         if (rulett.getRound() >= random) {
             if (winnerColor.get(winnerColor.size() - 2).equals(winnerColor.get(winnerColor.size() - 1)) && winnerColor.get(winnerColor.size() - 3).equals(winnerColor.get(winnerColor.size() - 1)) && winnerColor.get(winnerColor.size() - 4).equals(winnerColor.get(winnerColor.size() - 1)) && winnerColor.get(winnerColor.size() - 1).equals("black")) {
-                setChosenCombination("red");
+                chosenCombination.setBetOptions(betOptions.RED);
                 if (getValet() >= randomBetValue) {
                     setBet(randomBetValue);
                 } else {
@@ -39,7 +39,7 @@ public class NowItWillTheAnotherColorPlayer extends Person {
 
             }
         } else if (winnerColor.get(winnerColor.size() - 2).equals(winnerColor.get(winnerColor.size() - 1)) && winnerColor.get(winnerColor.size() - 3).equals(winnerColor.get(winnerColor.size() - 1)) && winnerColor.get(winnerColor.size() - 4).equals(winnerColor.get(winnerColor.size() - 1)) && winnerColor.get(winnerColor.size() - 1).equals("red")) {
-            setChosenCombination("black");
+            chosenCombination.setBetOptions(betOptions.BLACK);
             setBet(Math.min(getValet(), randomBetValue));
             setValet(getValet() - getBet());
         }

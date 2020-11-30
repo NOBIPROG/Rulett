@@ -10,9 +10,9 @@ public class RandomColorPlayer extends Person {
         int randomColor = (int) (Math.random() * 2);
         int randomBetValue = (int) (Math.random() * rulett.getMaxBet() + rulett.getMinBet());
         if (randomColor == 0) {
-            setChosenCombination("red");
+            chosenCombination.setBetOptions(betOptions.RED);
         } else {
-            setChosenCombination("black");
+            chosenCombination.setBetOptions(betOptions.BLACK);
         }
         if (getValet() >= randomBetValue) {
             setBet(randomBetValue);
