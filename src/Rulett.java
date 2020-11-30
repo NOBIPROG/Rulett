@@ -37,7 +37,7 @@ public class Rulett {
     public void redWin(Person person) {
         person.setValet(person.getValet() + (person.getBet() * 2));
         person.setWasWin(true);
-        System.out.println(person.getName()+ " "+(person.getBet()*2)+ " "+person.getChosenCombination());
+        System.out.println(person.getName() + " " + (person.getBet() * 2) + " " + person.getChosenCombination());
     }
 
     public void blackWin(Person person) {

@@ -8,15 +8,15 @@ public class FullRandomPlayer extends Person {
 
     @Override
     public void bet(Rulett rulett) {
-      int  randomBetValue = (int) (Math.random() * rulett.getMaxBet() + rulett.getMinBet());
-      int  randomStrategy = (int) (Math.random() * 13);
+        int randomBetValue = (int) (Math.random() * rulett.getMaxBet() + rulett.getMinBet());
+        int randomStrategy = (int) (Math.random() * 13);
         switch (randomStrategy) {
             case 0 -> setChosenCombination("red");
             case 1 -> setChosenCombination("black");
             case 2 -> setChosenCombination("even");
             case 3 -> setChosenCombination("odd");
             case 4 -> {
-              int  randomNr = (int) (Math.random() * 36);
+                int randomNr = (int) (Math.random() * 36);
                 setChosenCombination(Integer.toString(randomNr));
             }
             case 5 -> setChosenCombination("numbersbetwen1and18");
@@ -30,8 +30,7 @@ public class FullRandomPlayer extends Person {
         }
         if (getValet() >= randomBetValue) {
             setBet(randomBetValue);
-        }
-        else {
+        } else {
             setBet(getValet());
         }
         setValet(getValet() - getBet());

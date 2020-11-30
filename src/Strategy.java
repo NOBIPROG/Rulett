@@ -1,6 +1,6 @@
 public interface Strategy {
 
-   void bet(Rulett rulett);
+    void bet(Rulett rulett);
 
 
 }

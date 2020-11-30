@@ -10,10 +10,11 @@ public class SpecialCountPlayer extends Person {
         setWasWin(false);
 
     }
+
     @Override
     public void bet(Rulett rulett) {
-        if (nrOfWin == 3){
-            betValue = getValet() /12;
+        if (nrOfWin == 3) {
+            betValue = getValet() / 12;
             nrOfWin = 0;
         }
         int randomStrategy = (int) (Math.random() * 13);
@@ -36,21 +37,23 @@ public class SpecialCountPlayer extends Person {
             case 12 -> setChosenCombination("line3");
 
         }
-        if (nrOfWin == 0){
+        if (nrOfWin == 0) {
             setBet(betValue);
-    }
-        if (isWasWin()){
-            nrOfWin++;
-            switch (nrOfWin){
-                case 1 : setBet(betValue * 3);
-                break;
-                case 2 : setBet(betValue * 2);
-                break;
-                case 3 : setBet(betValue * 6);
-                break;
-            }
         }
-        else {
+        if (isWasWin()) {
+            nrOfWin++;
+            switch (nrOfWin) {
+                case 1:
+                    setBet(betValue * 3);
+                    break;
+                case 2:
+                    setBet(betValue * 2);
+                    break;
+                case 3:
+                    setBet(betValue * 6);
+                    break;
+            }
+        } else {
             nrOfWin = 0;
         }
 

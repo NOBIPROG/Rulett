@@ -51,7 +51,9 @@ public class Casino {
                     if (person.getChosenCombination().equals("0")) {
                         rulett.numberWin(person);
 
-                    }else {person.setWasWin(false);}
+                    } else {
+                        person.setWasWin(false);
+                    }
                 case 1:
                     switch (person.getChosenCombination()) {
                         case "red" -> rulett.redWin(person);
@@ -60,7 +62,7 @@ public class Casino {
                         case "numbersbetween1and18" -> rulett.numbersbetwen1and18Win(person);
                         case "line1" -> rulett.line1Win(person);
                         case "1" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 2:
@@ -71,7 +73,7 @@ public class Casino {
                         case "numbersbetween1and18" -> rulett.numbersbetwen1and18Win(person);
                         case "line2" -> rulett.line2Win(person);
                         case "2" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 3:
@@ -82,7 +84,7 @@ public class Casino {
                         case "numbersbetween1and18" -> rulett.numbersbetwen1and18Win(person);
                         case "line3" -> rulett.line3Win(person);
                         case "3" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 4:
@@ -93,7 +95,7 @@ public class Casino {
                         case "numbersbetween1and18" -> rulett.numbersbetwen1and18Win(person);
                         case "line1" -> rulett.line1Win(person);
                         case "4" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 5:
@@ -104,7 +106,7 @@ public class Casino {
                         case "numbersbetween1and18" -> rulett.numbersbetwen1and18Win(person);
                         case "line2" -> rulett.line2Win(person);
                         case "5" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 6:
@@ -115,7 +117,7 @@ public class Casino {
                         case "numbersbetween1and18" -> rulett.numbersbetwen1and18Win(person);
                         case "line3" -> rulett.line3Win(person);
                         case "6" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 7:
@@ -126,7 +128,7 @@ public class Casino {
                         case "numbersbetween1and18" -> rulett.numbersbetwen1and18Win(person);
                         case "line1" -> rulett.line1Win(person);
                         case "7" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 8:
@@ -137,7 +139,7 @@ public class Casino {
                         case "numbersbetween1and18" -> rulett.numbersbetwen1and18Win(person);
                         case "line2" -> rulett.line2Win(person);
                         case "8" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 9:
@@ -148,7 +150,7 @@ public class Casino {
                         case "numbersbetween1and18" -> rulett.numbersbetwen1and18Win(person);
                         case "line3" -> rulett.line3Win(person);
                         case "9" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 10:
@@ -159,7 +161,7 @@ public class Casino {
                         case "numbersbetween1and18" -> rulett.numbersbetwen1and18Win(person);
                         case "line1" -> rulett.line1Win(person);
                         case "10" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 11:
@@ -170,7 +172,7 @@ public class Casino {
                         case "numbersbetween1and18" -> rulett.numbersbetwen1and18Win(person);
                         case "line2" -> rulett.line2Win(person);
                         case "11" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 12:
@@ -181,7 +183,7 @@ public class Casino {
                         case "numbersbetween1and18" -> rulett.numbersbetwen1and18Win(person);
                         case "line3" -> rulett.line3Win(person);
                         case "12" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 13:
@@ -192,7 +194,7 @@ public class Casino {
                         case "numbersbetween1and18" -> rulett.numbersbetwen1and18Win(person);
                         case "line1" -> rulett.line1Win(person);
                         case "13" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 14:
@@ -203,7 +205,7 @@ public class Casino {
                         case "numbersbetween1and18" -> rulett.numbersbetwen1and18Win(person);
                         case "line2" -> rulett.line2Win(person);
                         case "14" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 15:
@@ -214,7 +216,7 @@ public class Casino {
                         case "numbersbetween1and18" -> rulett.numbersbetwen1and18Win(person);
                         case "line3" -> rulett.line3Win(person);
                         case "15" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 16:
@@ -225,7 +227,7 @@ public class Casino {
                         case "numbersbetween1and18" -> rulett.numbersbetwen1and18Win(person);
                         case "line1" -> rulett.line1Win(person);
                         case "16" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 17:
@@ -236,7 +238,7 @@ public class Casino {
                         case "numbersbetween1and18" -> rulett.numbersbetwen1and18Win(person);
                         case "line2" -> rulett.line2Win(person);
                         case "17" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 18:
@@ -247,7 +249,7 @@ public class Casino {
                         case "numbersbetween1and18" -> rulett.numbersbetwen1and18Win(person);
                         case "line3" -> rulett.line3Win(person);
                         case "18" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 19:
@@ -258,7 +260,7 @@ public class Casino {
                         case "numbersbetween19and36" -> rulett.numbersbetwen19an36Win(person);
                         case "line1" -> rulett.line1Win(person);
                         case "19" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 20:
@@ -269,7 +271,7 @@ public class Casino {
                         case "numbersbetween19and36" -> rulett.numbersbetwen19an36Win(person);
                         case "line2" -> rulett.line2Win(person);
                         case "20" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 21:
@@ -280,7 +282,7 @@ public class Casino {
                         case "numbersbetween19and36" -> rulett.numbersbetwen19an36Win(person);
                         case "line3" -> rulett.line3Win(person);
                         case "21" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 22:
@@ -291,7 +293,7 @@ public class Casino {
                         case "numbersbetween19and36" -> rulett.numbersbetwen19an36Win(person);
                         case "line1" -> rulett.line1Win(person);
                         case "22" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 23:
@@ -302,7 +304,7 @@ public class Casino {
                         case "numbersbetween19and36" -> rulett.numbersbetwen19an36Win(person);
                         case "line2" -> rulett.line2Win(person);
                         case "23" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 24:
@@ -313,7 +315,7 @@ public class Casino {
                         case "numbersbetween19and36" -> rulett.numbersbetwen19an36Win(person);
                         case "line3" -> rulett.line3Win(person);
                         case "24" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 25:
@@ -324,7 +326,7 @@ public class Casino {
                         case "numbersbetween19and36" -> rulett.numbersbetwen19an36Win(person);
                         case "line1" -> rulett.line1Win(person);
                         case "25" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 26:
@@ -335,7 +337,7 @@ public class Casino {
                         case "numbersbetween19and36" -> rulett.numbersbetwen19an36Win(person);
                         case "line2" -> rulett.line2Win(person);
                         case "26" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 27:
@@ -346,7 +348,7 @@ public class Casino {
                         case "numbersbetween19and36" -> rulett.numbersbetwen19an36Win(person);
                         case "line3" -> rulett.line3Win(person);
                         case "27" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 28:
@@ -357,7 +359,7 @@ public class Casino {
                         case "numbersbetween19and36" -> rulett.numbersbetwen19an36Win(person);
                         case "line1" -> rulett.line1Win(person);
                         case "28" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 29:
@@ -368,7 +370,7 @@ public class Casino {
                         case "numbersbetween19and36" -> rulett.numbersbetwen19an36Win(person);
                         case "line2" -> rulett.line2Win(person);
                         case "29" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 30:
@@ -379,7 +381,7 @@ public class Casino {
                         case "numbersbetween19and36" -> rulett.numbersbetwen19an36Win(person);
                         case "line3" -> rulett.line3Win(person);
                         case "30" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 31:
@@ -390,7 +392,7 @@ public class Casino {
                         case "numbersbetween19and36" -> rulett.numbersbetwen19an36Win(person);
                         case "line1" -> rulett.line1Win(person);
                         case "31" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 32:
@@ -401,7 +403,7 @@ public class Casino {
                         case "numbersbetween19and36" -> rulett.numbersbetwen19an36Win(person);
                         case "line2" -> rulett.line2Win(person);
                         case "32" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 33:
@@ -412,7 +414,7 @@ public class Casino {
                         case "numbersbetween19and36" -> rulett.numbersbetwen19an36Win(person);
                         case "line3" -> rulett.line3Win(person);
                         case "33" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 34:
@@ -423,7 +425,7 @@ public class Casino {
                         case "numbersbetween19and36" -> rulett.numbersbetwen19an36Win(person);
                         case "line1" -> rulett.line1Win(person);
                         case "34" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
 
                     }
                     break;
@@ -435,7 +437,7 @@ public class Casino {
                         case "numbersbetween19and36" -> rulett.numbersbetwen19an36Win(person);
                         case "line2" -> rulett.line2Win(person);
                         case "35" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
                 case 36:
@@ -446,7 +448,7 @@ public class Casino {
                         case "numbersbetween19and36" -> rulett.numbersbetwen19an36Win(person);
                         case "line3" -> rulett.line3Win(person);
                         case "36" -> rulett.numberWin(person);
-                        default->person.setWasWin(false);
+                        default -> person.setWasWin(false);
                     }
                     break;
             }

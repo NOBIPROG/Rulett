@@ -9,8 +9,7 @@ public class BravePlayer extends Person {
         setChosenCombination("red");
         if (getValet() >= rulett.getMaxBet()) {
             setBet(rulett.getMaxBet());
-        }
-        else {
+        } else {
             setBet(getValet());
         }
         setValet(getValet() - getBet());

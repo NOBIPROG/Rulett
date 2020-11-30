@@ -1,9 +1,6 @@
 public class AlwaysRedPlayer extends Person {
 
 
-
-
-
     public AlwaysRedPlayer(String name, int valet) {
         super(name, valet);
         setStrategy("alwaysred");

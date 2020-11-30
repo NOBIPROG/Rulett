@@ -64,4 +64,15 @@ public abstract class Person implements Strategy {
         this.strategy = strategy;
     }
 
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", valet=" + valet +
+                ", bet=" + bet +
+                ", wasWin=" + wasWin +
+                ", strategy='" + strategy + '\'' +
+                ", chosenCombination='" + chosenCombination + '\'' +
+                '}';
+    }
 }

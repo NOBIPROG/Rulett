@@ -1,4 +1,4 @@
-public class RandomColorPlayer extends Person{
+public class RandomColorPlayer extends Person {
 
     public RandomColorPlayer(String name, int valet) {
         super(name, valet);
@@ -16,8 +16,7 @@ public class RandomColorPlayer extends Person{
         }
         if (getValet() >= randomBetValue) {
             setBet(randomBetValue);
-        }
-        else {
+        } else {
             setBet(getValet());
         }
         setValet(getValet() - getBet());
