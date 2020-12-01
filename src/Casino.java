@@ -77,9 +77,9 @@ public class Casino {
             try {
                 for (Person person : people) {
                     if (rulett.getNumbersSpecs().get(winnerNr).contains(person.getChosenCombination().getBetOptions())) {
-                        if (person.getChosenCombination().getBetOptions().equals(betOptions.NUMBER) && person.getChosenCombination().getChosenNumber() == winnerNr) {
-                            rulett.numberWin(person);
-                        }
+                       // if (person.getChosenCombination().getBetOptions().equals(betOptions.NUMBER) && person.getChosenCombination().getChosenNumber() == winnerNr) {
+                         //   rulett.numberWin(person);
+                       // }
                         switch (person.getChosenCombination().getBetOptions()) {
                             case RED -> rulett.redWin(person);
                             case BLACK -> rulett.blackWin(person);
@@ -93,6 +93,13 @@ public class Casino {
                             case LINE1 -> rulett.line1Win(person);
                             case LINE2 -> rulett.line2Win(person);
                             case LINE3 -> rulett.line3Win(person);
+                            case NUMBER -> {
+                                if (person.getChosenCombination().getChosenNumber()==winnerNr) {
+                                    rulett.numberWin(person);
+                                }else {
+                                    person.setWasWin(false);
+                                }
+                            }
                         }
                     } else {
                         person.setWasWin(false);
