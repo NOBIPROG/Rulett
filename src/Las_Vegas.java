@@ -20,6 +20,7 @@ public class Las_Vegas {
         boolean isGoodAnswer = false;
         int k = 0;
         int answer = 0;
+
         while (!isGoodAnswer) {
             try {
                 isGoodAnswer = true;
@@ -44,6 +45,9 @@ public class Las_Vegas {
             answer = sc.nextInt();
             simulation.doSimulation(answer);
         } else {
+            System.out.println("A Tangiers kaszinóban a következő szabályok érvényesek: \nMinimum tét: 100 \nMaximum tét: 1.000.000");
+            tangiers.getRulett().setMinBet(100);
+            tangiers.getRulett().setMaxBet(1000000);
             System.out.println("Hány felhasználóval szeretnél játszani?");
 
             while (isGoodAnswer) {
@@ -65,11 +69,12 @@ public class Las_Vegas {
 
                 sc = new Scanner(System.in);
                 int startMoney = 0;
+                isGoodAnswer = false;
                 while (!isGoodAnswer) {
                     try {
                         isGoodAnswer = true;
                         startMoney = sc.nextInt();
-                        if (answer < 100) {
+                        if (startMoney < 100) {
                             throw new TooSmallNumberException();
                         }
                     } catch (InputMismatchException e) {
@@ -117,7 +122,7 @@ public class Las_Vegas {
                     tangiers.play();
                     try {
                         for (int j = 0; j < tangiers.getPeople().size(); j++) {
-                            System.out.println(tangiers.getPeople().get(i));
+                            System.out.println(tangiers.getPeople().get(j));
                         }
 
                     } catch (IndexOutOfBoundsException e) {
@@ -128,6 +133,7 @@ public class Las_Vegas {
                         if (tangiers.getPeople().get(k) instanceof User) {
                             System.out.println(tangiers.getPeople().get(k).getName() + "Szeretnél még egy kört játszani? \n1 --> Igen \n2--> Nem");
                             sc = new Scanner(System.in);
+                            isGoodAnswer = true;
                             while (isGoodAnswer) {
                                 try {
                                     isGoodAnswer = false;
