@@ -45,6 +45,19 @@ public class Las_Vegas {
             simulation.doSimulation(answer);
         }
         else {
+            System.out.println("Hány felhasználóval szeretnél játszani?");
+
+            while (isGoodAnswer){
+                    try {
+                        isGoodAnswer = false;
+                        answer = sc.nextInt();
+
+                    }catch (InputMismatchException e){
+                        System.out.println("Nem számot írtál be. Kérlek írj be számot");
+                        sc = new Scanner(System.in);
+                        isGoodAnswer = true;
+                    }
+            }
 
 
         }
