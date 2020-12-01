@@ -23,6 +23,8 @@ public class User extends Person {
                 isGoodAnswer = true;
                 if (answer1 < 100 || answer1 > 1000000) {
                     throw new BadBetException();
+                }if (answer1>getValet()){
+                  throw new TooBigNumberException();
                 }
 
             } catch (InputMismatchException e) {
@@ -33,6 +35,10 @@ public class User extends Person {
                 System.out.println("Ekkora összeget nem rakhatsz. Kérlek válassz újra.");
                 isGoodAnswer = false;
                 sc = new Scanner(System.in);
+            }catch (TooBigNumberException e){
+                System.out.println("Nincs ennyi pénzed! Maximum "+getValet()+"-t rakhatsz");
+                isGoodAnswer=false;
+                sc=new Scanner(System.in);
             }
         }
         setBet(answer1);
