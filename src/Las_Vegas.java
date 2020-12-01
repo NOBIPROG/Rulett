@@ -63,7 +63,7 @@ public class Las_Vegas {
             }
             for (int i = 0; i < answer; i++) {
                 sc = new Scanner(System.in);
-                System.out.println("Add meg a" + (i + 1) + ". játékos nevét");
+                System.out.println("Add meg a(z) " + (i + 1) + ". játékos nevét");
                 String name = sc.next();
                 System.out.println("Add meg a kezdő összeget");
 
@@ -105,7 +105,7 @@ public class Las_Vegas {
                 }
                 tangiers.fillUpCasino(answer);
             }
-            System.out.println("Hány kört szeretnénk játszani");
+            System.out.println("Hány kört szeretnénk játszani?");
             sc = new Scanner(System.in);
             int nrOfRound = 0;
             while (!isGoodAnswer) {
@@ -131,7 +131,7 @@ public class Las_Vegas {
                     }
                     while (k < tangiers.getPeople().size()) {
                         if (tangiers.getPeople().get(k) instanceof User) {
-                            System.out.println(tangiers.getPeople().get(k).getName() + "Szeretnél még egy kört játszani? \n1 --> Igen \n2--> Nem");
+                            System.out.println(tangiers.getPeople().get(k).getName() + " Szeretnél még egy kört játszani? \n1 --> Igen \n2 --> Nem");
                             sc = new Scanner(System.in);
                             isGoodAnswer = true;
                             while (isGoodAnswer) {
@@ -160,7 +160,15 @@ public class Las_Vegas {
                             k++;
                         }
                     }
-
+                    int biggestNr = 0;
+                    int winnerPlayer = 0;
+                    for (int j = 0; j < tangiers.getPeople().size(); j++) {
+                                if (biggestNr < (tangiers.getPeople().get(j).getWonMoney()-tangiers.getPeople().get(j).getLostMoney())){
+                                    biggestNr = (tangiers.getPeople().get(j).getWonMoney()-tangiers.getPeople().get(j).getLostMoney());
+                                    winnerPlayer = j;
+                                }
+                    }
+                    System.out.println("Vége a játéknak. A nyertes játékos adatai: \n" + "Név: " + tangiers.getPeople().get(winnerPlayer).getName() +"\nNyereménye: " + biggestNr);
 
                 }
             }
