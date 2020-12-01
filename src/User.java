@@ -17,7 +17,7 @@ public class User extends Person {
         int answer1 = 0;
         int chosenNr = 0;
         while (!isGoodAnswer) {
-            System.out.println("Mekkora összeget szeretnél rakni? (Min: 100, Max: 1.000.000)");
+            System.out.println(name +  " mekkora összeget szeretnél rakni? (Min: 100, Max: 1.000.000)");
             try {
                 answer1 = sc.nextInt();
                 isGoodAnswer = true;
