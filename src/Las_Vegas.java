@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Las_Vegas {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Las_Vegas lasVegas = new Las_Vegas();
         lasVegas.letsGoToTheCasino();
     }
@@ -14,7 +14,7 @@ public class Las_Vegas {
         tangiers = new Casino();
     }
 
-    public void letsGoToTheCasino() {
+    public void letsGoToTheCasino() throws InterruptedException {
         System.out.println("Üdvözöllek a Tangiers kaszinóban. Először is kérlek add meg, hogy szimulációt szeretnél-e játszani vagy azonnal odaülsz a rulett asztalhoz és játszol élesben: \n 1. --> Szimuláció \n 2. --> Játék");
         Scanner sc = new Scanner(System.in);
         boolean isGoodAnswer = false;
@@ -118,6 +118,7 @@ public class Las_Vegas {
                     sc = new Scanner(System.in);
                     isGoodAnswer = false;
                 }
+            }
                 for (int i = 0; i < nrOfRound; i++) {
                     tangiers.play();
                     try {
@@ -160,18 +161,16 @@ public class Las_Vegas {
                             k++;
                         }
                     }
-                    int biggestNr = 0;
-                    int winnerPlayer = 0;
-                    for (int j = 0; j < tangiers.getPeople().size(); j++) {
-                                if (biggestNr < (tangiers.getPeople().get(j).getWonMoney()-tangiers.getPeople().get(j).getLostMoney())){
-                                    biggestNr = (tangiers.getPeople().get(j).getWonMoney()-tangiers.getPeople().get(j).getLostMoney());
-                                    winnerPlayer = j;
-                                }
-                    }
-                    System.out.println("Vége a játéknak. A nyertes játékos adatai: \n" + "Név: " + tangiers.getPeople().get(winnerPlayer).getName() +"\nNyereménye: " + biggestNr);
-
                 }
+                int biggestNr = 0;
+                int winnerPlayer = 0;
+                for (int j = 0; j < tangiers.getPeople().size(); j++) {
+                    if (biggestNr < (tangiers.getPeople().get(j).getWonMoney() - tangiers.getPeople().get(j).getLostMoney())) {
+                        biggestNr = (tangiers.getPeople().get(j).getWonMoney() - tangiers.getPeople().get(j).getLostMoney());
+                        winnerPlayer = j;
+                    }
+                }
+                System.out.println("Vége a játéknak. A nyertes játékos adatai: \n" + "Név: " + tangiers.getPeople().get(winnerPlayer).getName() + "\nNyereménye: " + biggestNr);
             }
         }
     }
-}

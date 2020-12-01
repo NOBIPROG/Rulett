@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.ConcurrentModificationException;
+import java.util.concurrent.TimeUnit;
 
 public class Casino {
 
@@ -55,7 +56,7 @@ public class Casino {
 
     }
 
-    public void play() {
+    public void play() throws InterruptedException {
 
             for (Person person : people) {
                 if (person.getValet() > 0) {
@@ -66,6 +67,8 @@ public class Casino {
                     break;
                 }
             }
+        System.out.println("Pörgetés...");
+        TimeUnit.SECONDS.sleep(5);
             int winnerNr = rulett.getActualNr();
             if (rulett.getResults().get("red").equals(winnerNr)) {
                 System.out.println("Aktuális nyerőszám: Piros " + winnerNr);
@@ -74,12 +77,11 @@ public class Casino {
             } else {
                 System.out.println("Aktuális nyerőszám: Zöld " + winnerNr);
             }
+        TimeUnit.SECONDS.sleep(3);
             try {
                 for (Person person : people) {
                     if (rulett.getNumbersSpecs().get(winnerNr).contains(person.getChosenCombination().getBetOptions())) {
-                       // if (person.getChosenCombination().getBetOptions().equals(betOptions.NUMBER) && person.getChosenCombination().getChosenNumber() == winnerNr) {
-                         //   rulett.numberWin(person);
-                       // }
+
                         switch (person.getChosenCombination().getBetOptions()) {
                             case RED -> rulett.redWin(person);
                             case BLACK -> rulett.blackWin(person);

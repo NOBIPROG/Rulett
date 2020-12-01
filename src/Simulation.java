@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Simulation {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Simulation simulation = new Simulation();
         simulation.doSimulation(100);
     }
@@ -18,7 +18,7 @@ public class Simulation {
 
     }
 
-    public void doSimulation(int nrOfRound) {
+    public void doSimulation(int nrOfRound) throws InterruptedException {
         System.out.println("Kérlek válassz, hogy melyik stratégiájú játékost szeretnéd szimulálni: ");
         System.out.println("1. --> Martingel stratégia \n 2. --> Random-szín stratégia \n 3. --> Full random stratégia (véletlen tét, véletlen kombináció) \n 4. --> Konzervatív stratégia (legkisebb tét, mindig piros) \n 5. --> Bátor stratégia (legnagyobb tét, mindig piros) \n 6. --> Most már biztos a másik jön stratégia \n 7. --> 1-3-2-6 stratégia \n 8. --> Felhasználó");
         Scanner sc = new Scanner(System.in);
