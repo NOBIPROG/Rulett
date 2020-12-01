@@ -36,7 +36,7 @@ public class Casino {
         this.income = income;
     }
 
-    public void fillUpCasino() {
+    public void fillUpCasino(int number) {
 
     }
 
