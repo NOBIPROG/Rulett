@@ -61,7 +61,7 @@ public class Simulation {
             }
             case 5 -> {
                 System.out.println("A válaszott stratégia: Bátor. Játékos a következő adatokkal jön létre: \n Név: Mr. Brave \n Kezdő tőke: 4.000.000 HUF");
-                person = new BravePlayer("Mr. Brave", 500000);
+                person = new BravePlayer("Mr. Brave", 4000000);
             }
             case 6 -> {
                 System.out.println("A válaszott stratégia: Most már biztos a másik jön. Játékos a következő adatokkal jön létre: \n Név: Mr. AnotherColor \n Kezdő tőke: 4.000.000 HUF");
