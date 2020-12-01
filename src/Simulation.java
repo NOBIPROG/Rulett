@@ -20,7 +20,7 @@ public class Simulation {
 
     public void doSimulation(int nrOfRound) {
         System.out.println("Kérlek válassz, hogy melyik stratégiájú játékost szeretnéd szimulálni: ");
-        System.out.println("1. --> Martingel stratégia \n 2. --> Random-szín stratégia \n 3. --> Full random stratégia (véletlen tét, véletlen kombináció) \n 4. --> Konzervatív stratégia (legkisebb tét, mindig piros) \n 5. --> Bátor stratégia (legnagyobb tét, mindig piros) \n 6. --> Most már biztos a másik jön stratégia \n 7. --> 1-3-2-6 stratégia ");
+        System.out.println("1. --> Martingel stratégia \n 2. --> Random-szín stratégia \n 3. --> Full random stratégia (véletlen tét, véletlen kombináció) \n 4. --> Konzervatív stratégia (legkisebb tét, mindig piros) \n 5. --> Bátor stratégia (legnagyobb tét, mindig piros) \n 6. --> Most már biztos a másik jön stratégia \n 7. --> 1-3-2-6 stratégia \n 8. --> Felhasználó");
         Scanner sc = new Scanner(System.in);
         Person person;
         int answer = 0;
@@ -29,7 +29,7 @@ public class Simulation {
             try {
                 answer = sc.nextInt();
                 isGoodAnswer = true;
-                if (answer == 0 || answer > 7){
+                if (answer == 0 || answer > 8){
                     throw new TooBigNumberException();
                 }
             }catch (InputMismatchException e){
@@ -70,6 +70,10 @@ public class Simulation {
             case 7 -> {
                 System.out.println("A válaszott stratégia: 1-3-2-6. Játékos a következő adatokkal jön létre: \n Név: Mr. SpecialCount \n Kezdő tőke: 4.000.000 HUF");
                 person = new SpecialCountPlayer("Mr. SpecialCount", 4000000);
+            }
+            case 8 ->{
+                System.out.println("A válaszott stratégia: Felhasználó Játékos a következő adatokkal jön létre: \\n Név: User \\n Kezdő tőke: 4.000.000 HUF ");
+                person = new User("Mr. User",4000000);
             }
             default -> throw new IllegalStateException("Unexpected value: " + answer);
         }
