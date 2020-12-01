@@ -30,13 +30,13 @@ public class ChosenCombination {
     @Override
     public String toString() {
         if (betOptions.equals(betOptions.NUMBER)) {
-            return "ChosenCombination{" +
-                    "betOptions=" + betOptions +
-                    ", chosenNumber=" + chosenNumber +
+            return
+                    "Választott mező = " + betOptions +
+                    ", Választott szám = " + chosenNumber +
                     '}';
         } else {
-            return "ChosenCombination{" +
-                    "betOptions=" + betOptions;
+            return
+                    "Választott mező = " + betOptions;
         }
     }
 }

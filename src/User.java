@@ -24,6 +24,7 @@ public class User extends Person {
                 if (answer1 < 100 || answer1 > 1000000) {
                     throw new BadBetException();
                 }
+
             } catch (InputMismatchException e) {
                 System.out.println("Nem számot adtál meg. Kérlek írj be számot.");
                 isGoodAnswer = false;

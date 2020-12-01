@@ -77,12 +77,12 @@ public abstract class Person {
     @Override
     public String toString() {
         return "Person{" +
-                "name='" + name + '\'' +
-                ", valet=" + valet +
-                ", bet=" + bet +
-                ", wasWin=" + wasWin +
-                ", strategy='" + strategy + '\'' +
-                ", chosenCombination=" + chosenCombination +
+                "Név = '" + name + '\'' +
+                ", Vagyona = " + valet +
+                ", Rakott összeg = " + bet +
+                ", Nyert-e a körben = " + wasWin +
+                ", Stratégia ='" + strategy + '\'' + ", " +
+                  chosenCombination +
                 '}';
     }
 
