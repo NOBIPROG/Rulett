@@ -86,7 +86,7 @@ public class Las_Vegas {
 
             }
             System.out.println("Hány BOT-ot szeretnél?");
-            sc=new Scanner(System.in);
+            sc = new Scanner(System.in);
             while (isGoodAnswer) {
                 try {
                     isGoodAnswer = false;
@@ -99,8 +99,29 @@ public class Las_Vegas {
                 }
                 tangiers.fillUpCasino(answer);
             }
+            System.out.println("Hány kört szeretnénk játszani");
+            sc = new Scanner(System.in);
+            int nrOfRound = 0;
+            while (!isGoodAnswer) {
+                try {
+                    isGoodAnswer = true;
+                    nrOfRound = sc.nextInt();
 
-
+                } catch (InputMismatchException e) {
+                    System.out.println("Nem számot írtál be. Kérlek írj be számot");
+                    sc = new Scanner(System.in);
+                    isGoodAnswer = false;
+                }
+                for (int i = 0; i < nrOfRound; i++) {
+                    tangiers.play();
+                    try {
+                        System.out.println(tangiers.getPeople().get(0));
+                    } catch (IndexOutOfBoundsException e) {
+                        System.out.println("Minden játékosnak elfogyott a pénze, így vége a játéknak.");
+                        break;
+                    }
+                }
+            }
         }
     }
 }
