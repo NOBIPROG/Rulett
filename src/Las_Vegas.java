@@ -18,6 +18,7 @@ public class Las_Vegas {
         System.out.println("Üdvözöllek a Tangiers kaszinóban. Először is kérlek add meg, hogy szimulációt szeretnél-e játszani vagy azonnal odaülsz a rulett asztalhoz és játszol élesben: \n 1. --> Szimuláció \n 2. --> Játék");
         Scanner sc = new Scanner(System.in);
         boolean isGoodAnswer = false;
+        int k = 0;
         int answer = 0;
         while (!isGoodAnswer) {
             try {
@@ -115,11 +116,46 @@ public class Las_Vegas {
                 for (int i = 0; i < nrOfRound; i++) {
                     tangiers.play();
                     try {
-                        System.out.println(tangiers.getPeople().get(0));
+                        for (int j = 0; j < tangiers.getPeople().size(); j++) {
+                            System.out.println(tangiers.getPeople().get(i));
+                        }
+
                     } catch (IndexOutOfBoundsException e) {
                         System.out.println("Minden játékosnak elfogyott a pénze, így vége a játéknak.");
                         break;
                     }
+                    while (k < tangiers.getPeople().size()) {
+                        if (tangiers.getPeople().get(k) instanceof User) {
+                            System.out.println(tangiers.getPeople().get(k).getName() + "Szeretnél még egy kört játszani? \n1 --> Igen \n2--> Nem");
+                            sc = new Scanner(System.in);
+                            while (isGoodAnswer) {
+                                try {
+                                    isGoodAnswer = false;
+                                    answer = sc.nextInt();
+                                    if (answer < 1 || answer > 2) {
+                                        throw new TooBigNumberException();
+                                    }
+                                } catch (InputMismatchException e) {
+                                    System.out.println("Nem számot írtál be. Kérlek írj be számot");
+                                    sc = new Scanner(System.in);
+                                    isGoodAnswer = true;
+                                } catch (TooBigNumberException e) {
+                                    System.out.println("Ilyen szám nem szerepel a felsorolásban. Kérlek helyes számot adj meg");
+                                    sc = new Scanner(System.in);
+                                    isGoodAnswer = true;
+                                }
+                            }
+                            if (answer == 1) {
+                                k++;
+                            } else {
+                                tangiers.getPeople().remove(i);
+                            }
+                        } else {
+                            k++;
+                        }
+                    }
+
+
                 }
             }
         }
