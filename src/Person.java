@@ -7,6 +7,7 @@ public abstract class Person {
     protected String strategy;
     protected ChosenCombination chosenCombination;
     protected int wonMoney;
+    protected int lostMoney;
 
     public void setChosenCombination(ChosenCombination chosenCombination) {
         this.chosenCombination = chosenCombination;
@@ -83,5 +84,13 @@ public abstract class Person {
                 ", strategy='" + strategy + '\'' +
                 ", chosenCombination=" + chosenCombination +
                 '}';
+    }
+
+    public int getLostMoney() {
+        return lostMoney;
+    }
+
+    public void setLostMoney(int lostMoney) {
+        this.lostMoney = lostMoney;
     }
 }

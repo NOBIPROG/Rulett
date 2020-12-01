@@ -103,6 +103,7 @@ public class Casino {
                         }
                     } else {
                         person.setWasWin(false);
+                        person.setLostMoney(person.getLostMoney()+person.getBet());
                     }
             }
 
