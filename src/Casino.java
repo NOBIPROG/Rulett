@@ -36,7 +36,22 @@ public class Casino {
         this.income = income;
     }
 
-    public void fillUpCasino() {
+    public void fillUpCasino(int number) {
+
+        for (int i = 0; i < number; i++) {
+            int random = (int)(Math.random()*7);
+            int randomValet = (int)((Math.random()*4000000)+100) ;
+            switch (random) {
+                case 0 -> people.add(new AlwaysRedPlayer("AlwaysRed " + i, randomValet));
+                case 1 -> people.add(new BravePlayer("Brave " + i, randomValet));
+                case 2 -> people.add(new ConservationPlayer("Conservation " + i, randomValet));
+                case 3 -> people.add(new FullRandomPlayer("FullRandom " + i, randomValet));
+                case 4 -> people.add(new NowItWillTheAnotherColorPlayer("AnotherColor " + i, randomValet));
+                case 5 -> people.add(new RandomColorPlayer("RandomColor " + i, randomValet));
+                case 6 -> people.add(new SpecialCountPlayer("SpecialCount " + i, randomValet));
+            }
+
+        }
 
     }
 
