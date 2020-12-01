@@ -36,7 +36,7 @@ public class User extends Person {
         }
         setBet(answer1);
         System.out.println("Mire szeretnél rakni?");
-        System.out.println("1. --> Pirosra \n2.--> Feketére \n3.--> Párosra \n4.--> Páratlanra \n5.--> Számra \n6.--> 1-18 közötti számra \n7.--> 19-36 közötti számra \n8.--> Első harmadra \n9.--> Második harmad \n10.--> Harmadik harmad \n11. --> Első oszlop \n12. --> Második oszlop \n 13.--> Harmadik oszlop");
+        System.out.println("1.--> Pirosra \n2.--> Feketére \n3.--> Párosra \n4.--> Páratlanra \n5.--> Számra \n6.--> 1-18 közötti számra \n7.--> 19-36 közötti számra \n8.--> Első harmadra \n9.--> Második harmad \n10.--> Harmadik harmad \n11.--> Első oszlop \n12.--> Második oszlop \n13.--> Harmadik oszlop");
         sc = new Scanner(System.in);
         while (isGoodAnswer) {
             try {
